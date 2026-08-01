@@ -73,7 +73,7 @@ export const RevealEnvelope: React.FC = () => {
             {/* Letter Body Paragraphs */}
             <div className="space-y-6 font-sans text-lg md:text-xl leading-relaxed text-ink-maroon/90">
               {letter.bodyParagraphs.map((paragraph, idx) => (
-                <p key={idx}>{paragraph}</p>
+                <p key={idx} className="whitespace-pre-line">{paragraph}</p>
               ))}
             </div>
 
