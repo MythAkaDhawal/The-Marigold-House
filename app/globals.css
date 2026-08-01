@@ -1,0 +1,99 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-ink-maroon: #3A2420;
+    --color-marigold: #E0932E;
+    --color-dawn-ivory: #F3E6D2;
+    --color-clay-rose: #C97C6D;
+    --color-moss: #6E7F4F;
+    --color-antique-brass: #9C7A3E;
+    --color-parchment: #ECDFC7;
+    --color-hairline: #D9C6AE;
+    --color-muted-taupe: #8A7A6E;
+    --color-turmeric: #C99A2E;
+    --color-brick: #8C3B2E;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    background-color: var(--color-dawn-ivory);
+    color: var(--color-ink-maroon);
+    font-family: var(--font-jakarta), system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    selection-background-color: var(--color-marigold);
+    selection-color: #ffffff;
+  }
+
+  ::selection {
+    background: #E0932E;
+    color: #FFFFFF;
+  }
+}
+
+/* Custom Deckled Paper Edge Styling */
+.deckled-card {
+  position: relative;
+  background-color: #ECDFC7;
+  border-radius: 4px;
+  box-shadow: 0 8px 30px rgba(58, 36, 32, 0.12);
+  border: 1px solid rgba(217, 198, 174, 0.6);
+}
+
+.deckled-card::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: 6px;
+  pointer-events: none;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.25) 0%, rgba(224, 147, 46, 0.05) 100%);
+}
+
+/* Custom Scrollbar for tactile feel */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #F3E6D2;
+}
+::-webkit-scrollbar-thumb {
+  background: #9C7A3E;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #E0932E;
+}
+
+/* Focus outline accessibility ring */
+*:focus-visible {
+  outline: 2px solid #9C7A3E !important;
+  outline-offset: 3px !important;
+  border-radius: 2px;
+}
+
+/* Skip link for screen readers */
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 16px;
+  background: #3A2420;
+  color: #F3E6D2;
+  padding: 8px 16px;
+  z-index: 100;
+  transition: top 0.2s ease;
+  font-family: var(--font-jakarta), sans-serif;
+  font-size: 14px;
+  border-radius: 4px;
+}
+.skip-link:focus {
+  top: 16px;
+}
