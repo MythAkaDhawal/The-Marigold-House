@@ -155,7 +155,7 @@ export const STORY_CONTENT = {
     headline: 'A Written Promise',
     promptToOpen: 'Unfold the letter',
     dateStamp: 'Written in the Marigold Hour',
-    salutation: 'Heyy~,',
+    salutation: 'Heyy~',
     bodyParagraphs: [
       `Once you grow older, the more you realize\nIt is not the people who speak the most that truly empathic.\n\nIt is about the ones who notice your silence in a crowd,\nWho understands your quiet without needing it said out loud.`,
       `But what if they arrive a little too late?\nWhen your heart already surrendered to fate.\n\nWhat if no one sees the art you hide in your pain,\nAnd all your unspoken colors just wash away in rain?`,
